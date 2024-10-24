@@ -1,5 +1,5 @@
 const HomePage = () => {
-  return <div>Homepage</div>;
+  return <div className="p-pageSide">Homepage</div>;
 };
 
 export default HomePage;

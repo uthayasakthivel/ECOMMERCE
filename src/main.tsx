@@ -6,11 +6,13 @@ import HomePage from "./pages/HomePage";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import SignUp from "./pages/SignUp";
+import "./index.css";
+import Root from "./pages/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar />,
+    element: <Root />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/contact", element: <Contact /> },
@@ -21,7 +23,5 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </StrictMode>
+  <RouterProvider router={router}></RouterProvider>
 );
