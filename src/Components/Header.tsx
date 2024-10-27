@@ -1,8 +1,8 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaOpencart } from "react-icons/fa";
-const Navbar = () => {
+const Header = () => {
   return (
     <div>
       <div className="font-poppins text-16 pt-40 pb-16 flex items-center justify-between p-pageSide">
@@ -35,4 +35,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

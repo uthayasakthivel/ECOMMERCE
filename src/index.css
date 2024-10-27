@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-dot-list-style {
+  gap: 12px;
+  margin-bottom: 12px;
+}

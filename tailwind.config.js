@@ -1,8 +1,8 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
+      Primary: "#FFFFFF",
       Primary1: "#363738",
       Secondary: "#F5F5F5",
       Secondary1: "#FEFAF1",
@@ -14,7 +14,7 @@ export default {
       Button1: "#00FF66",
       Button2: "#DB4444",
       "Hover Button": "#E07575",
-      "Secondary 2": "#DB4444",
+      "Secondary-2": "#DB4444",
       "30% 1px": "rgba(0, 0, 0, 0.3)",
     },
     fontWeight: {
@@ -29,6 +29,7 @@ export default {
       16: 16,
       24: 24,
       36: 36,
+      48: 48,
     },
     extend: {
       spacing: {
