@@ -1,13 +1,13 @@
 import { ArrowProps, DotProps } from "react-multi-carousel";
 
 export type carouselContentType = {
-  logo: string;
-  logoAltText: string;
-  caption: string;
-  image: string;
-  imageAltText: string;
-  shopNowLink: string;
-  content: string;
+  logo?: string;
+  logoAltText?: string;
+  caption?: string;
+  image?: string;
+  imageAltText?: string;
+  shopNowLink?: string;
+  content?: string;
 };
 
 export type responsiveBreakPointsType = {
@@ -22,6 +22,10 @@ export type infiniteType = boolean;
 
 export interface CustomArrowProps extends ArrowProps {
   //   myOwnStuff: string;
+  customArrowStyles?: string;
+  customLeftArrowStyles?: string;
+  customRightArrowStyles?: string;
+  customArrowIconStyles?: { fontSize?: string; color?: string };
 }
 
 export interface CustomDotProps extends DotProps {
@@ -31,3 +35,5 @@ export interface CustomDotProps extends DotProps {
 export type showDots = boolean;
 
 export type dotListClassName = string;
+
+export type bgColor = string;

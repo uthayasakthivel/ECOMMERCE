@@ -13,13 +13,11 @@ export default {
       Button: "#000000",
       Button1: "#00FF66",
       Button2: "#DB4444",
-      "Hover Button": "#E07575",
+      "Hover-Button": "#E07575",
       "Secondary-2": "#DB4444",
       "30% 1px": "rgba(0, 0, 0, 0.3)",
     },
-    fontWeight: {
-      bold: 700,
-    },
+
     fontFamily: {
       poppins: ["poppins"],
       inter: ["Inter"],

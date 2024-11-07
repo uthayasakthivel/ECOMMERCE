@@ -57,8 +57,32 @@ const HeroSectionCarousel = () => {
 
   const infinite = true;
 
-  const customLeftArrow: React.ReactElement = <CustomLeftArrow />;
-  const customRightArrow: React.ReactElement = <CustomRightArrow />;
+  const CustomArrowStyles =
+    "absolute top-1/2 transform -translate-y-1/2 z-50 border-0 bg-black bg-opacity-50 min-w-[43px] min-h-[43px] opacity-100 cursor-pointer flex items-center justify-center transition-all duration-500 rounded-full p-2";
+
+  const customLeftArrowStyles = " left-4 ";
+
+  const customRightArrowStyles = "right-4 ";
+
+  const customArrowIconStyles = {
+    color: "#fff",
+    fontSize: "2rem",
+  };
+
+  const customLeftArrow: React.ReactElement = (
+    <CustomLeftArrow
+      customLeftArrowStyles={customLeftArrowStyles}
+      customArrowStyles={CustomArrowStyles}
+      customArrowIconStyles={customArrowIconStyles}
+    />
+  );
+  const customRightArrow: React.ReactElement = (
+    <CustomRightArrow
+      customRightArrowStyles={customRightArrowStyles}
+      customArrowStyles={CustomArrowStyles}
+      customArrowIconStyles={customArrowIconStyles}
+    />
+  );
   const customDots: React.ReactElement = <CustomDots />;
   const showDots = true;
   const dotListClassName = "custom-dot-list-style";
@@ -68,6 +92,7 @@ const HeroSectionCarousel = () => {
     responsiveBreakPoints,
     infinite,
     customLeftArrow,
+    customLeftArrowStyles,
     customRightArrow,
     showDots,
     dotListClassName,
