@@ -30,7 +30,7 @@ const Header = () => {
           <FaOpencart />
         </div>
       </div>
-      <div className="border-t opacity-30 pb-40"></div>{" "}
+      <div className="border-t opacity-30 "></div>
     </div>
   );
 };

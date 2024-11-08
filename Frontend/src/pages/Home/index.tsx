@@ -7,7 +7,7 @@ const HomePage = () => {
     <div>
       <div className="p-pageSide grid grid-cols-12">
         <HomeMenu />
-        <div className="col-span-1"></div>
+        <div className="col-span-1 w-[1px] bg-Primary1 opacity-30"></div>
         <HeroSectionCarousel />
       </div>
       <FlashSales />

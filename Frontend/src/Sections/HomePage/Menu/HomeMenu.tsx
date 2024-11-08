@@ -1,6 +1,6 @@
 const HomeMenu = () => {
   return (
-    <ul className="col-span-2 flex flex-col gap-4">
+    <ul className="col-span-2 flex flex-col gap-4 pt-40">
       <li>Woman’s Fashion</li>
       <li>Men’s Fashion</li>
       <li>Electronics</li>

@@ -13,7 +13,7 @@ const SectionHeader = ({
           <span className="w-5 h-10 bg-Secondary-2 rounded-[4px] inline-block "></span>
           {heading}
         </p>
-        <p className="font-inter font-semibold text-36 mt-6">{subHeading}</p>
+        <p className="font-inter font-semibold text-36 mt-4">{subHeading}</p>
       </div>
       <div>
         <Timer />

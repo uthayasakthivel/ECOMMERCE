@@ -100,7 +100,7 @@ const HeroSectionCarousel = () => {
   };
 
   return (
-    <div className="col-span-9">
+    <div className="col-span-9 pt-40 ">
       <CustomCarousel {...Value} />{" "}
     </div>
   );
