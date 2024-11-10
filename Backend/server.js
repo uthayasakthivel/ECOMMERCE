@@ -4,9 +4,17 @@ import mongoose from "mongoose";
 import productRoutes from "./src/routes/productRoutes.js"; // Your product routes
 import path from "path";
 import url from "url";
+import cors from "cors";
 
 // Express App
 const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5173", // Allow requests from your frontend
+    allowedHeaders: "Content-Type, Authorization", // Allow specific headers
+  })
+);
 
 // Dotenv Config (ensure you have a .env file with your MongoDB URI)
 dotenv.config();
@@ -26,8 +34,8 @@ app.use("/backend/api/products", productRoutes); // Product routes
 // Serve static files (uploads folder should be publicly accessible)
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-
+console.log(__dirname, "---------------");
+app.use("/uploads", express.static(path.join(__dirname, "src", "uploads")));
 // Connect to MongoDB Database
 mongoose
   .connect(process.env.MONGOURI)
@@ -35,7 +43,7 @@ mongoose
     console.log("DB Connected Successfully");
 
     // Start the server
-    const port = process.env.PORT || 5000;
+    const port = process.env.PORT || 3000;
     app.listen(port, () => {
       console.log(`Backend connected at port ${port}`);
     });

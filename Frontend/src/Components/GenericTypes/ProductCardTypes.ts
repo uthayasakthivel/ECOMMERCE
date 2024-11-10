@@ -1,3 +1,11 @@
+type products = {
+  _id: string;
+  productName: string;
+  productPrice: number;
+  productOfferPrice: number;
+  productImage: string;
+};
+
 type CategoryType = {
   creationAt: string;
   id: number;
@@ -18,4 +26,4 @@ type filterByCategoryType = {
   category: CategoryType;
 };
 
-export type { filterByCategoryType };
+export type { filterByCategoryType, products };

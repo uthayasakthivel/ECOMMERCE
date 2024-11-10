@@ -1,20 +1,20 @@
 import CustomCarousel from "../CustomCarousel";
 import CustomLeftArrow from "../CustomCarousel/Config/HeroSection/CustomLeftArrow";
 import CustomRightArrow from "../CustomCarousel/Config/HeroSection/CustomRightArrow";
-import { filterByCategoryType } from "../GenericTypes/ProductCardTypes";
-const ProductCard = ({
-  cardDetails,
-}: {
-  cardDetails: filterByCategoryType[];
-}) => {
+import { products } from "../GenericTypes/ProductCardTypes";
+const ProductCard = ({ cardDetails }: { cardDetails: products[] }) => {
   const responsiveBreakPoints = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 6,
+      items: 5,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
     },
   };
 

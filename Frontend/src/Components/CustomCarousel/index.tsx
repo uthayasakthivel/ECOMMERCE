@@ -9,13 +9,13 @@ import {
 } from "./types/HeroSection/HeroSectionCarouselType";
 import { responsiveBreakPointsType } from "./types/HeroSection/HeroSectionCarouselType";
 import { ReactElement } from "react";
-import { filterByCategoryType } from "../GenericTypes/ProductCardTypes";
+import { products } from "../GenericTypes/ProductCardTypes";
 import { BsCurrencyDollar } from "react-icons/bs";
 import GloableChip from "../Utils/GloableChip";
 
 type carouselAllTypes = {
   carouselContent?: carouselContentType[];
-  cardDetails?: filterByCategoryType[];
+  cardDetails?: products[];
   responsiveBreakPoints: responsiveBreakPointsType;
   infinite: infiniteType;
   customLeftArrow: ReactElement;
@@ -86,11 +86,11 @@ export default function CustomCarousel({
                 <>
                   <div className="flex mt-10 justify-around items-center group/add-to-cart">
                     <div className="w-full relative">
-                      <div className="max-w-[270px] bg-[#eaeaea] relative">
+                      <div className="w-[270px] h-[250px] bg-[#eaeaea] relative">
                         <img
-                          src={eachCardDetails.image}
+                          src={eachCardDetails.productImage}
                           alt=""
-                          className="px-9 py-10"
+                          className="px-9 py-10 h-full w-full object-contain"
                         />
                         <GloableChip />
                         <a
@@ -101,15 +101,15 @@ export default function CustomCarousel({
                         </a>
                       </div>
                       <div className="mt-4 font-semibold">
-                        <p>{eachCardDetails.title}</p>
+                        <p>{eachCardDetails.productName}</p>
                         <div className="flex gap-3">
                           <p className="text-Secondary-2 flex items-center">
                             <BsCurrencyDollar fontSize={15} />
-                            {eachCardDetails.price}
+                            {eachCardDetails.productPrice}
                           </p>
                           <p className="text-Primary1 flex items-center line-through opacity-50">
                             <BsCurrencyDollar fontSize={15} />
-                            {eachCardDetails.price + 50}
+                            {eachCardDetails.productOfferPrice + 50}
                           </p>
                         </div>
                       </div>

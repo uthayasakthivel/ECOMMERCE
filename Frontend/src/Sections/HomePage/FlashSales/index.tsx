@@ -1,30 +1,11 @@
-import { useEffect, useState } from "react";
 import GlobalBtn from "../../../Components/Utils/GlobalBtn";
 import SectionHeader from "../../../Components/Utils/SectionHeader";
-import axios from "axios";
 import ProductCard from "../../../Components/Utils/ProductCard";
-import { filterByCategoryType } from "../../../Components/GenericTypes/ProductCardTypes";
-import JoyStickImage from "../../../assets/joystick.png";
+import useProducts from "../../../hooks";
 
 const FlashSales = () => {
-  const [flashSaleProducts, setFlashSaleProducts] = useState<
-    filterByCategoryType[]
-  >([]);
-
-  useEffect(() => {
-    const fetchAllProducts = async () => {
-      const flashSaleProducts = await axios.get<filterByCategoryType[]>(
-        "https://api.escuelajs.co/api/v1/products/?categoryId=1"
-      );
-      const updatedProducts = flashSaleProducts.data.map((product) => ({
-        ...product,
-        image: JoyStickImage,
-      }));
-
-      setFlashSaleProducts(updatedProducts);
-    };
-    fetchAllProducts();
-  }, []);
+  const { products } = useProducts();
+  console.log(products, "products");
 
   const content = {
     heading: "Today’s",
@@ -39,7 +20,7 @@ const FlashSales = () => {
   return (
     <div className="p-pageSide mt-36">
       <SectionHeader {...content} />
-      <ProductCard cardDetails={flashSaleProducts} />
+      <ProductCard cardDetails={products} />
       <div className="mt-14 text-center">
         <GlobalBtn {...btnContent} />
       </div>
